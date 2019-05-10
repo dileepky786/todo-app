@@ -19,4 +19,10 @@ export class TodoService {
     return this.http.get<Todo[]>(`${this.url}${this.urlLimit}`);
     
   }
+
+  getTodo(id:number): Observable<Todo>{
+
+    return this.http.get<Todo>(`${this.url}/${id}`);
+
+  }
 }
