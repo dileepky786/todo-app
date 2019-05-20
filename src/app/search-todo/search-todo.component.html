@@ -1,0 +1,7 @@
+<ul class="heroes">
+  <li *ngFor="let todo of todos">
+    <a routerLink="/detail/{{todo.id}}">
+    <span class="badge">{{todo.id}}</span> {{todo.title}}
+    </a>
+  <div *ngIf="todos==''">No todos found</div>
+</ul>
