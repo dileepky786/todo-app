@@ -27,4 +27,16 @@ export class TodoDetailsComponent implements OnInit {
                     .subscribe(todo => this.todo = todo)
   }
 
+  goBack(): void{
+
+    this.location.back();
+  }
+
+  saveTodo(): void {
+
+    this.todoService.updateTodo(this.todo).subscribe(() => this.goBack());
+  }
+
+
+
 }

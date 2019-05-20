@@ -1,0 +1,9 @@
+
+  <h2>Add todo</h2>
+  <div>
+    <label>title:
+      <input #todoName placeholder="title"/>
+    </label>
+  </div>
+  <button (click)="saveTodo(todoName.value)">save</button>
+  <button (click)="goBack()">cencel</button>

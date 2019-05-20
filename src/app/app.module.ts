@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoDetailsComponent } from './todo-details/todo-details.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     TodoDetailsComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
