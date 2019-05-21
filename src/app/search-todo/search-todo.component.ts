@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from '../todo';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-search-todo',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchTodoComponent implements OnInit {
 
-  constructor() { }
+
+  todos: Todo[];
+
+  constructor( private todoService: TodoService) { }
+
+  search(title: string): void{
+
+    this.todoService.search(title).subscribe(todos => this.todos = todos )
+
+  }
 
   ngOnInit() {
   }

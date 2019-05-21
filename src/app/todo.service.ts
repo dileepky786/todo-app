@@ -21,7 +21,7 @@ export class TodoService {
   addTodo(todo: Todo): Observable<Todo[]> {
 
     return this.http.post<Todo[]>(this.url,todo,httpOptions);
-    
+
   }
 
   getTodos(): Observable<Todo[]> {
@@ -46,5 +46,10 @@ export class TodoService {
       return this.http.delete<Todo>(`${this.url}/${todo.id}`,httpOptions)
   }
 
+  search(title: string): Observable<Todo[]> {
+
+    return this.http.get<Todo[]>(`${this.url}/search?q=${title}`)
+
+  }
 
 }

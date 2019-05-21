@@ -1,7 +1,17 @@
-<ul class="heroes">
-  <li *ngFor="let todo of todos">
-    <a routerLink="/detail/{{todo.id}}">
-    <span class="badge">{{todo.id}}</span> {{todo.title}}
-    </a>
-  <div *ngIf="todos==''">No todos found</div>
-</ul>
+<h2>Search todo</h2>
+<div class="searchBox">
+  <br>
+  <input #todoName />
+      <button (click)="search(todoName.value)">
+        Go
+      </button>
+
+  <ul class="heroes">
+    <li *ngFor="let todo of todos">
+      <a routerLink="/detail/{{todo.id}}">
+      <span class="badge">{{todo.id}}</span> {{todo.title}}
+      </a>
+    </li>
+    <div *ngIf="todos==''">No todos found</div>
+  </ul>
+</div>

@@ -3,10 +3,6 @@
   <a routerLink="/dashboard">Dashboard</a>
   <a routerLink="/todos">Todos</a>
   <a routerLink="/addTodo">Add Todo</a>
-  <input #heroName />
-  <button (click)="search(heroName.value)">
-    search
-  </button>
+  <a routerLink="/todos/search">Search Todo</a>
 </nav>
-<app-search-todo></app-search-todo>
 <router-outlet></router-outlet>
