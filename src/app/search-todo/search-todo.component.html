@@ -1,11 +1,7 @@
 <h2>Search todo</h2>
 <div class="searchBox">
   <br>
-  <input #todoName />
-      <button (click)="search(todoName.value)">
-        Go
-      </button>
-
+  <input #todoName (keyup)="search(todoName.value)"/>
   <ul class="heroes">
     <li *ngFor="let todo of todos">
       <a routerLink="/detail/{{todo.id}}">
